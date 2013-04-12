@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)http://static.ryanberdeen.com/share/2011/01/customevent-crash.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script>
+function crash() {
+    // CustomEvents have a detail property.
+    // Accessing it before calling initCustomEvent crashes Safari.
+    document.createEvent('CustomEvent').detail + '';
+}
+</script>
+<style type="text/css"></style></head><body>
+<button onclick="crash();">Crash</button>
+
+</body></html>
