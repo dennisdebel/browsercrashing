@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+	<head>
+		<title></title>
+		<script src="jquery-git.js"></script>
+		<script type='text/javascript'>//<![CDATA[ 
+$(function(){
+var chart = new Highcharts.Chart({
+
+    chart: {
+        renderTo: 'container'
+    },
+
+    xAxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    },
+
+    series: [{
+        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+    }],
+    
+     tooltip: {
+        formatter: function () {
+            return '<span><span>asdf</span></span>';
+        }
+    }
+
+});
+
+});//]]>  
+
+</script>
+
+	</head>
+	<body>
+<script src="highcharts.js"></script>
+
+
+
+<div id="container" style="height: 300px"></div>
+<!-- click the dots to crash mobilesafari 6.1 -->
+
+
+
+	</body>
+</html>
