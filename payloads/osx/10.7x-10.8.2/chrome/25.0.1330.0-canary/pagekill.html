@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+	<head>
+		<title></title>
+		<SCRIPT language=JavaScript>
+
+function expandingWindow(website) {
+
+//var windowprops='width=300,height=300,scrollbars=yes,status=yes,resizable=yes'
+var heightspeed = 100; // vertical scrolling speed (higher = slower)
+var widthspeed = 100;  // horizontal scrolling speed (higher = slower)
+var leftdist = 0;    // distance to left edge of window
+var topdist = 0;     // distance to top edge of window
+
+
+if (window.resizeTo&&navigator.userAgent.indexOf("Opera")==-1) {
+	var winwidth = window.screen.availWidth - leftdist;
+	var winheight = window.screen.availHeight - topdist;
+	var sizer = window.open("","","left=" + leftdist + ",top=" + topdist +",width="+ winwidth +",height="+ winheight +",scrollbars=yes,status=yes,resizable=yes");
+
+		//for (sizeheight = 1; sizeheight < winheight; sizeheight += heightspeed)
+		//sizer.resizeTo("1", sizeheight);
+		
+		var i=0;
+		var pos=0;
+		
+		while (i<500)
+  {
+ 
+ 		for (pos = 1; pos < 100; pos++)
+		sizer.resizeTo(pos-50,pos-50);
+		sizer.moveTo(50,50);
+
+			
+ 
+		 }
+		
+		sizer.location = website;
+	}
+	else
+	window.open(website,'mywindow');
+	}
+
+</SCRIPT>
+	</head>
+	<body>
+<!-- set up your links, either via text links or form buttons-->
+
+<a href="#" onClick="expandingWindow('resize.html');return false">Yahoo.com</a><br>
+
+	</body>
+</html>
